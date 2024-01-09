@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./component/modules/header";
 import { SECTIONS } from "./utils/constants/sections";
+import NativeNftCollection from "./component/modules/native-nft-collection";
 
 function App() {
   const [panel, setPanel] = useState<number>(1);
@@ -14,6 +15,8 @@ function App() {
     switch (id) {
       case 1:
         return <Header />;
+      case 6:
+        return <NativeNftCollection />;
       default:
         break;
     }

@@ -20,6 +20,9 @@ module.exports = {
         "tooltip-gradient":
           "linear-gradient(87.52deg, #080808 5.59%, #701471 85.78%)",
       },
+      backgroundColor: {
+        "component-background": "#161616"
+      }
     },
   },
   plugins: [],

@@ -9,7 +9,21 @@
 @text-color: fade(@white, 45%);
 @black-gradient: radial-gradient(101.41% 101.41% at 50% -0.7%, #101010 35%, #1F1F1F 68%, #323232 100%), linear-gradient(41.83deg, rgba(255, 255, 255, 0.4) 1.72%, rgba(255, 255, 255, 0.128) 72.51%);
 @purple-gradient: radial-gradient(101.41% 101.41% at 50% -0.7%, #101010 35%, #401241 68%, #701471 100%), linear-gradient(41.83deg, #FFFFFF 1.72%, rgba(255, 255, 255, 0) 72.51%);
-
+@layer components {
+  .text-largest {
+    @apply text-white  text-2xl lg:text-3xl font-semibold;
+  }
+  .text-larger {
+    @apply text-white  text-base lg:text-xl font-semibold;
+  }
+  .text-normal {
+    @apply text-white/80  text-base lg:text-xl font-semibold;
+  }
+  .text-small {
+    @apply text-white/70 text-sm lg:text-base font-normal;
+  }
+  /* ... */
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
