@@ -4,6 +4,10 @@ import Header from "./component/modules/header";
 import { SECTIONS } from "./utils/constants/sections";
 import NativeNftCollection from "./component/modules/native-nft-collection";
 
+import Behind from "./component/modules/behind-the-scene";
+import Technology from "./component/modules/our-technology";
+import Footer from "./component/modules/footer";
+
 function App() {
   const [panel, setPanel] = useState<number>(1);
 
@@ -17,6 +21,10 @@ function App() {
         return <Header />;
       case 6:
         return <NativeNftCollection />;
+      case 7:
+        return <Behind />;
+      case 8:
+        return <Technology/>
       default:
         break;
     }
@@ -46,6 +54,7 @@ function App() {
             )
         )}
       </ul>
+      <Footer/>
     </div>
   );
 }

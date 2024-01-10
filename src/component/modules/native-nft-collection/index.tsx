@@ -7,6 +7,7 @@ import nft4 from "../../../assets/image/nft-collection-4.png";
 import nft5 from "../../../assets/image/nft-collection-5.png";
 import nft6 from "../../../assets/image/nft-collection-6.png";
 import nft7 from "../../../assets/image/nft-collection-7.png";
+import nft8 from "../../../assets/image/nft-collection-8.png";
 const items = [
   {
     name: "Exclusive Access Code",
@@ -43,11 +44,14 @@ const nfts = [
   {
     imgUrl: nft7,
   },
+  {
+    imgUrl: nft8,
+  },
 ];
 const NativeNftCollection = () => {
   return (
-    <div className="container max-w-[1128px] mx-auto pt-12 lg:pt-40 px-4">
-      <div className="bg-component-background p-6 lg:p-8 rounded-xl lg:rounded-2xl">
+    <div className="container max-w-[1128px] mx-auto py-12 lg:pt-40 lg:pb-20 px-4">
+      <div className="bg-component-background px-6 pt-6 lg:px-8 lg:pt-8 rounded-xl lg:rounded-2xl">
         <div className="flex items-center">
           <CollectionIcon size={40}></CollectionIcon>{" "}
           <p className="text-largest pl-3">Native NFT Collection</p>
@@ -80,7 +84,7 @@ const NativeNftCollection = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 border lg:grid-cols-4 p-3 lg:p-4 gap-2 rounded border-[#146EF4]">
+        <div className="grid grid-cols-2 border lg:grid-cols-4 px-3 pt-4 lg:px-4 lg:pt-4 gap-2 rounded-t-2xl border-[#146EF4] border-b-0">
           {nfts.map((item, index) => {
             return (
               <div key={index}>
