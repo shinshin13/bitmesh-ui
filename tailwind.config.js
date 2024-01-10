@@ -23,10 +23,12 @@ module.exports = {
           "linear-gradient(87.52deg, #080808 5.59%, #701471 85.78%)",
         "nav-gradient":
           "linear-gradient(0deg, #161616, #161616), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))",
+        "gray-gradient":
+          "radial-gradient(101.41% 101.41% at 50% -0.7%, #101010 35%, #1F1F1F 68%, #323232 100%)",
       },
       backgroundColor: {
-        "component-background": "#161616"
-      }
+        "component-background": "#161616",
+      },
     },
   },
   plugins: [],

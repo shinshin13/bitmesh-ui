@@ -8,6 +8,10 @@ import { SECTIONS } from "./utils/constants/sections";
 import { useState } from "react";
 import NativeNftCollection from "./components/native-nft-collection";
 
+import Behind from "./component/modules/behind-the-scene";
+import Technology from "./component/modules/our-technology";
+import Footer from "./component/modules/footer";
+
 function App() {
   const [panel, setPanel] = useState<string>("");
 
@@ -35,6 +39,10 @@ function App() {
         return <TheEconomy />;
       case SECTIONS(40)[5].id:
         return <NativeNftCollection />;
+      case SECTIONS(40)[6].id:
+        return <Behind />;
+      case SECTIONS(40)[7].id:
+        return <Technology />;
       default:
         break;
     }
@@ -76,7 +84,6 @@ function App() {
       )}
     </ul>
   );
-
   return (
     <div className="App w-full h-full bg-[#080808]">
       <div className="h-full ">
@@ -86,6 +93,7 @@ function App() {
         {renderTabContent(panel)}
         {tabs}
       </div>
+      <Footer/>
     </div>
   );
 }
