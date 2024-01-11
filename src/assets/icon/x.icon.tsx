@@ -15,8 +15,8 @@ export const XIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
         stroke="url(#paint1_linear_134_8027)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M17.4923 20.3652L10 10.8335H15.9345L20.5594 16.7248L25.5004 10.86H28.7688L22.1397 18.7377L30 28.7502H24.0833L19.0754 22.3791L13.729 28.7325H10.4429L17.4923 20.3652ZM24.9457 26.9841L13.6388 12.5996H15.0714L26.364 26.9841H24.9457Z"
         fill="white"
       />
@@ -29,9 +29,9 @@ export const XIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20 -0.281689) scale(40.5634)"
         >
-          <stop offset="0.35" stop-color="#101010" />
-          <stop offset="0.68" stop-color="#401241" />
-          <stop offset="1" stop-color="#701471" />
+          <stop offset="0.35" stopColor="#101010" />
+          <stop offset="0.68" stopColor="#401241" />
+          <stop offset="1" stopColor="#701471" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_134_8027"
@@ -41,8 +41,8 @@ export const XIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
           y2="10.2083"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

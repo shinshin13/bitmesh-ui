@@ -40,7 +40,7 @@ export const SECTIONS = (size?: number) => [
     size: "96px",
   },
   {
-    id: "#empty",
+    id: "",
     icon: <div />,
     text: "",
     top: "418px",

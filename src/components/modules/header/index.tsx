@@ -14,7 +14,7 @@ const Header = () => {
         <div>
           {SECTIONS(40).map((item) => {
             return (
-              <div
+              <a
                 className={`group absolute rounded-lg top-[${item.top}] left-[${item.left}]`}
                 style={{
                   top: item.top,
@@ -23,19 +23,10 @@ const Header = () => {
                   height: item.size,
                 }}
                 key={item.id}
-                onClick={() => {
-                  if (item.text) {
-                    window.location.hash = item.id;
-                    // const section = document.getElementById(item.id);
-                    // console.log(section);
-                    // if (section) {
-                    //   console.log(section);
-                    //   const sectionTop = section.offsetTop;
-                    //   window.scrollTo({
-                    //     top: sectionTop,
-                    //     behavior: "smooth",
-                    //   });
-                    // }
+                href={item.id}
+                onClick={(e) => {
+                  if (!item.text) {
+                    e.preventDefault();
                   }
                 }}
               >
@@ -71,7 +62,7 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

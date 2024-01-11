@@ -52,7 +52,7 @@ const NativeNftCollection = () => {
   return (
     <div
       id="#native-NFT-collection"
-      className="container max-w-[1128px] mx-auto pt-12 lg:pt-40 px-4"
+      className="container max-w-[1128px] mx-auto mt-12 lg:mt-48 px-4"
     >
       <div className="bg-component-background p-6 lg:p-8 rounded-xl lg:rounded-2xl">
         <div className="flex items-center">

@@ -8,9 +8,9 @@ import { SECTIONS } from "./utils/constants/sections";
 import { useState } from "react";
 import NativeNftCollection from "./components/native-nft-collection";
 
-import Behind from "./component/modules/behind-the-scene";
-import Technology from "./component/modules/our-technology";
-import Footer from "./component/modules/footer";
+import Behind from "./components/modules/behind-the-scene";
+import Technology from "./components/modules/our-technology";
+import Footer from "./components/modules/footer";
 
 function App() {
   const [panel, setPanel] = useState<string>(SECTIONS(40)[0].id);
@@ -93,7 +93,7 @@ function App() {
         {renderTabContent(panel)}
         {tabs}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

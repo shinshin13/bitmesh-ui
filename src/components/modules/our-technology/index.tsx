@@ -66,7 +66,10 @@ const nfts = [
 ];
 const Technology = () => {
   return (
-    <div className="container max-w-[1128px] mx-auto pt-12 lg:pt-40 px-4">
+    <div
+      id="our-technology"
+      className="container max-w-[1128px] mx-auto mt-12 lg:mt-48 px-4"
+    >
       <div className="bg-component-background px-6 pt-6 lg:px-8 lg:pt-8 rounded-xl lg:rounded-2xl">
         <div className="flex items-center">
           <TechnologyIcon size={40}></TechnologyIcon>

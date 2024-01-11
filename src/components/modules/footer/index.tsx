@@ -3,7 +3,7 @@ import BitmeshLogo from "../../../assets/image/bitmesh-3D-logo.png";
 import { XIcon } from "../../../assets/icon/x.icon";
 import { TelegramIcon } from "../../../assets/icon/telegram.icon";
 import { MIcon } from "../../../assets/icon/m.icon";
-import blueInside from "../../../assets/image/blue_inside.png";
+
 const Footer = () => {
   return (
     <div className="relative bg-[url('/src/assets/image/cover.jpg')] bg-no-repeat bg-center bg-cover w-full h-screen">
@@ -38,7 +38,7 @@ const Footer = () => {
               <p className="text-largest pb-4">Are You Ready to Join</p>
               <img
                 alt="bitmesh logo"
-                className="mx-auto lg:mx-0"
+                className="mx-auto lg:mx-0 mb-9"
                 src={BitmeshLogo}
               />
             </div>
@@ -57,8 +57,8 @@ const Footer = () => {
               <div>Native NFT Collection</div>
               <div className="lg:text-right">Our Technology</div>
             </div>
-            <hr />
-            <p className="text-small text-center py-4">
+            <hr className="border-[#ffffff66]" />
+            <p className="text-small text-center py-4 text-[#ffffff66]">
               ©BitMesh &nbsp;&nbsp; | &nbsp;&nbsp; All Rights Reserved
             </p>
           </div>
