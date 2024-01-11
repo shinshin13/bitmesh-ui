@@ -7,6 +7,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-color: #080808;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,4 +38,155 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* //////////////////////////// */
+
+.nav-tabs .active .section {
+  height: calc(100% + 3px);
+  margin-top: -3px;
+}
+
+.nav-tabs > li {
+  margin-bottom: 0;
+  background: #161616;
+  height: 100%;
+}
+
+.nav-tabs > li > .section {
+  height: 100%;
+}
+
+.tabs {
+  padding-left: 81px;
+  background: #161616;
+  border-top: 3px solid #ffffff33;
+}
+
+.tabs li {
+  float: left;
+  margin-inline: 16px;
+  position: relative;
+}
+.tabs .section {
+  float: left;
+  padding: 24px 48px;
+  text-decoration: none;
+  background: #161616;
+  color: #fff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.tabs .active {
+  z-index: 3;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(20, 110, 244, 0) 3.7540299999999998%,
+    #146ef4 34.5677%,
+    #146ef4 63.2146%,
+    rgba(20, 110, 244, 0) 97.3055%
+  );
+  background: linear-gradient(
+      90deg,
+      rgba(20, 110, 244, 0) 15.19%,
+      #146ef4 23.31%,
+      #146ef4 30.86%,
+      rgba(20, 110, 244, 0) 39.85%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  border-radius: 16px;
+  border-top: none;
+}
+.tabs .active .section {
+  background: #161616;
+  color: #fff;
+}
+.tabs .active:before,
+.tabs .active:after,
+.tabs .active .section:before,
+.tabs .active .section:after {
+  top: -3px;
+}
+
+.tabs li:before,
+.tabs li:after,
+.tabs li .section:before,
+.tabs li .section:after {
+  position: absolute;
+  top: 0;
+}
+.tabs li:last-child:after,
+.tabs li:last-child .section:after,
+.tabs li:first-child:before,
+.tabs li:first-child .section:before,
+.tabs .active:after,
+.tabs .active:before,
+.tabs .active .section:after,
+.tabs .active .section:before {
+  content: "";
+}
+.tabs .active:before,
+.tabs .active:after {
+  background: #161616;
+  z-index: 1;
+}
+.tabs li:before,
+.tabs li:after {
+  background: #161616;
+  width: 13px;
+  height: 13px;
+}
+.tabs li:before {
+  left: -13px;
+}
+.tabs li:after {
+  right: -13px;
+}
+.tabs li .section:after,
+.tabs li .section:before {
+  width: 20px;
+  height: 20px;
+  border-radius: 16px;
+  background: #161616;
+  z-index: 2;
+}
+.tabs .active .section:after,
+.tabs .active .section:before {
+  background: #161616;
+  border: 3px solid #ffffff33;
+  border-bottom-width: 0px;
+  top: -3px;
+}
+.tabs li:first-child.active .section:before,
+.tabs li:last-child.active .section:after {
+  background: #161616;
+  border: 3px solid #ffffff33;
+  border-radius: 0 16px 0 0;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.tabs li:first-child.active .section:before {
+  border-radius: 0 16px 0 0;
+  border-left-width: 0px;
+}
+.tabs li:last-child.active .section:before {
+  border-radius: 0 16px 0 0;
+  border-right-width: 3px;
+}
+.tabs li:last-child.active .section:after {
+  border-radius: 16px 0 0 0;
+  border-left-width: 3px;
+}
+.tabs li .section:before {
+  left: -20px;
+  border-radius: 0 16px 0 0;
+  border-left-width: 0px !important;
+}
+.tabs li .section:after {
+  right: -20px;
+  border-radius: 16px 0 0 0;
+  border-right-width: 0px !important;
 }

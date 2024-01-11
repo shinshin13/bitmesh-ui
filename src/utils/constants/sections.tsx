@@ -6,10 +6,10 @@ import { StackIcon } from "../../assets/icon/stack.icon";
 import { StoryIcon } from "../../assets/icon/story.icon";
 import { TechnologyIcon } from "../../assets/icon/technology.icon";
 
-export const SECTIONS = [
+export const SECTIONS = (size?: number) => [
   {
     id: 1,
-    icon: <BitmeshIcon />,
+    icon: <BitmeshIcon size={size} />,
     text: "What is BitMesh",
     top: "117px",
     left: "952px",
@@ -17,7 +17,7 @@ export const SECTIONS = [
   },
   {
     id: 2,
-    icon: <StoryIcon />,
+    icon: <StoryIcon size={size} />,
     text: "Create your Story",
     top: "240px",
     left: "619px",
@@ -25,7 +25,7 @@ export const SECTIONS = [
   },
   {
     id: 3,
-    icon: <GlobeIcon />,
+    icon: <GlobeIcon size={size} />,
     text: "Build your World",
     top: "208px",
     left: "304px",
@@ -33,7 +33,7 @@ export const SECTIONS = [
   },
   {
     id: 4,
-    icon: <StackIcon />,
+    icon: <StackIcon size={size} />,
     text: "The Economy",
     top: "528px",
     left: "372px",
@@ -49,7 +49,7 @@ export const SECTIONS = [
   },
   {
     id: 6,
-    icon: <CollectionIcon />,
+    icon: <CollectionIcon size={size} />,
     text: "Native NFT Collection",
     top: "576px",
     left: "846px",
@@ -57,7 +57,7 @@ export const SECTIONS = [
   },
   {
     id: 7,
-    icon: <BehindIcon />,
+    icon: <BehindIcon size={size} />,
     text: "Behind the Scene",
     top: "762px",
     left: "252px",
@@ -65,7 +65,7 @@ export const SECTIONS = [
   },
   {
     id: 8,
-    icon: <TechnologyIcon />,
+    icon: <TechnologyIcon size={size} />,
     text: "Our Technology",
     top: "689px",
     left: "1128px",

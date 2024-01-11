@@ -9,6 +9,8 @@ module.exports = {
       backgroundImage: {
         "white-border":
           "linear-gradient(41.83deg, #FFFFFF 1.72%, rgba(255, 255, 255, 0) 72.51%)",
+        "light-border":
+          "linear-gradient(41.83deg, rgba(255, 255, 255, 0.4) 1.72%, rgba(255, 255, 255, 0) 72.51%)",
         "gray-border":
           "linear-gradient(45deg, rgba(255, 255, 255, 0.12) 1.3%, rgba(255, 255, 255, 0) 59.64%)",
         "purple-gradient":
@@ -19,6 +21,8 @@ module.exports = {
           "radial-gradient(101.41% 101.41% at 50% -0.7%, #101010 35%, #1F1F1F 68%, #323232 100%), linear-gradient(41.83deg, rgba(255, 255, 255, 0.4) 1.72%, rgba(255, 255, 255, 0) 72.51%)",
         "tooltip-gradient":
           "linear-gradient(87.52deg, #080808 5.59%, #701471 85.78%)",
+        "nav-gradient":
+          "linear-gradient(0deg, #161616, #161616), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))",
       },
       backgroundColor: {
         "component-background": "#161616"
