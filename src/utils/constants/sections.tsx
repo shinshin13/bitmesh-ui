@@ -8,7 +8,7 @@ import { TechnologyIcon } from "../../assets/icon/technology.icon";
 
 export const SECTIONS = (size?: number) => [
   {
-    id: 1,
+    id: "#what-is-bitmesh",
     icon: <BitmeshIcon size={size} />,
     text: "What is BitMesh",
     top: "117px",
@@ -16,7 +16,7 @@ export const SECTIONS = (size?: number) => [
     size: "96px",
   },
   {
-    id: 2,
+    id: "#create-your-story",
     icon: <StoryIcon size={size} />,
     text: "Create your Story",
     top: "240px",
@@ -24,7 +24,7 @@ export const SECTIONS = (size?: number) => [
     size: "88px",
   },
   {
-    id: 3,
+    id: "#build-your-world",
     icon: <GlobeIcon size={size} />,
     text: "Build your World",
     top: "208px",
@@ -32,7 +32,7 @@ export const SECTIONS = (size?: number) => [
     size: "112px",
   },
   {
-    id: 4,
+    id: "#the-economy",
     icon: <StackIcon size={size} />,
     text: "The Economy",
     top: "528px",
@@ -40,7 +40,7 @@ export const SECTIONS = (size?: number) => [
     size: "96px",
   },
   {
-    id: 5,
+    id: "#empty",
     icon: <div />,
     text: "",
     top: "418px",
@@ -48,7 +48,7 @@ export const SECTIONS = (size?: number) => [
     size: "48px",
   },
   {
-    id: 6,
+    id: "#native-NFT-collection",
     icon: <CollectionIcon size={size} />,
     text: "Native NFT Collection",
     top: "576px",
@@ -56,7 +56,7 @@ export const SECTIONS = (size?: number) => [
     size: "88px",
   },
   {
-    id: 7,
+    id: "#behind-the-scene",
     icon: <BehindIcon size={size} />,
     text: "Behind the Scene",
     top: "762px",
@@ -64,7 +64,7 @@ export const SECTIONS = (size?: number) => [
     size: "88px",
   },
   {
-    id: 8,
+    id: "#our-technology",
     icon: <TechnologyIcon size={size} />,
     text: "Our Technology",
     top: "689px",

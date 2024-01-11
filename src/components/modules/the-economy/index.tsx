@@ -6,7 +6,7 @@ import { ListIcon } from "../../../assets/icon/list.icon";
 
 const TheEconomy = () => {
   return (
-    <div>
+    <div id="#the-economy" className="p-4">
       <Card
         className="mt-48 mx-auto"
         icon={<StackIcon />}
@@ -40,11 +40,12 @@ const TheEconomy = () => {
           </div>
         }
         image={
-          <>
+          <div>
             <img className="rounded-xl mb-6" src={PurpleDiamond} alt="" />
             <img className="rounded-t-xl" src={OrangeDiamond} alt="" />
-          </>
+          </div>
         }
+        imageClass="mt-12"
       />
     </div>
   );

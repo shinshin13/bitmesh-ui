@@ -4,7 +4,7 @@ import { CollectionIcon } from "../../../assets/icon/collection.icon";
 
 const CreateYourStory = () => {
   return (
-    <div>
+    <div id="#create-your-story">
       <Card
         className="mt-48 mx-auto"
         icon={<CollectionIcon />}

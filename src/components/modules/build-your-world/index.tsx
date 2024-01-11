@@ -5,7 +5,7 @@ import { GlobeIcon } from "../../../assets/icon/globe.icon";
 
 const BuildYourWorld = () => {
   return (
-    <div>
+    <div id="#build-your-world">
       <Card
         className="mt-48 mx-auto md:flex-col"
         icon={<GlobeIcon />}

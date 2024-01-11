@@ -6,10 +6,10 @@ import { SECTIONS } from "../../../utils/constants/sections";
 
 const Header = () => {
   return (
-    <div>
-      <div className="relative bg-[url('/src/assets/image/cover.jpg')] bg-no-repeat bg-center bg-cover w-full h-screen">
+    <div className="bg-[url('/src/assets/image/galaxy-cover.png')] md:bg-transparent">
+      <div className="relative bg-[url('/src/assets/image/cover-mobile.png')]  md:bg-[url('/src/assets/image/cover.jpg')] bg-no-repeat bg-center bg-contain md:bg-cover w-full h-screen">
         <div className="absolute top-8 left-1/2 -translate-x-1/2">
-          <img alt="" src={BitmeshLogo} />
+          <img alt="" src={BitmeshLogo} className="w-[175px] md:w-max" />
         </div>
         <div>
           {SECTIONS(40).map((item) => {
@@ -23,6 +23,18 @@ const Header = () => {
                   height: item.size,
                 }}
                 key={item.id}
+                onClick={() => {
+                  window.location.href = item.id;
+                  const section = document.getElementById(item.id);
+                  if (section) {
+                    console.log(section);
+                    const sectionTop = section.offsetTop;
+                    window.scrollTo({
+                      top: sectionTop,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
               >
                 <div
                   className={`rounded-lg w-full h-full ${
@@ -41,7 +53,7 @@ const Header = () => {
                         } p-px rounded-lg h-full`}
                       >
                         <div
-                          className={`rounded-lg bg-light-gradient ${
+                          className={`custom-icon rounded-lg bg-light-gradient ${
                             item.text ? "group-hover:bg-purple-gradient" : ""
                           } text-white flex items-center justify-center h-full`}
                         >
@@ -61,10 +73,14 @@ const Header = () => {
           })}
         </div>
         <div className="flex justify-center items-center h-full">
-          <img className="w-60 h-60" alt="" src={CenterLogo} />
+          <img
+            className="w-[127px] h-[127px] md:w-60 md:h-60"
+            alt=""
+            src={CenterLogo}
+          />
         </div>
         <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 mt-20">
-          <div className="opacity-70 text-white text-center mb-6">
+          <div className="opacity-70 text-black text-center mb-6 md:text-white ">
             Powered by
           </div>
           <div className="flex justify-center items-center gap-8 grayscale">

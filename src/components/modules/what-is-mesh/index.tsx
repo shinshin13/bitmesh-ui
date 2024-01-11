@@ -5,7 +5,7 @@ import Parrish from "../../../assets/image/parrish.jpg";
 
 const WhatIsMesh = () => {
   return (
-    <div>
+    <div id="#what-is-bitmesh">
       <Card
         className="mt-48 mx-auto"
         icon={<BitmeshIcon />}

@@ -36,9 +36,9 @@ export const ListIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(15 -0.211267) scale(30.4225)"
         >
-          <stop offset="0.35" stop-color="#101010" />
-          <stop offset="0.68" stop-color="#401241" />
-          <stop offset="1" stop-color="#701471" />
+          <stop offset="0.35" stopColor="#101010" />
+          <stop offset="0.68" stopColor="#401241" />
+          <stop offset="1" stopColor="#701471" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_134_7196"
@@ -48,8 +48,8 @@ export const ListIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
           y2="7.65625"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

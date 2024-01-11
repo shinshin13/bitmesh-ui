@@ -7,7 +7,8 @@ const Card: FC<{
   content: ReactNode;
   image?: ReactNode;
   className: string;
-}> = ({ icon, title, subTitle, content, image, className }) => {
+  imageClass?: string;
+}> = ({ icon, title, subTitle, content, image, className, imageClass }) => {
   return (
     <div>
       <div
@@ -27,7 +28,9 @@ const Card: FC<{
         </div>
         {image && (
           <div className="pl-8 pr-6 mt-auto ">
-            <div className="p-6 h-full basis-1/3 rounded-t-xl h-96 border pb-0 border border-b-0 border-[#146EF4]">
+            <div
+              className={`p-6 h-full basis-1/3 rounded-t-xl h-96 border pb-0 border border-b-0 border-[#146EF4] ${imageClass}`}
+            >
               {image}
             </div>
           </div>

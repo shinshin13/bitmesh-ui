@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./App.css";
 import BuildYourWorld from "./components/modules/build-your-world";
 import CreateYourStory from "./components/modules/create-your-story";
@@ -6,26 +5,35 @@ import Header from "./components/modules/header";
 import TheEconomy from "./components/modules/the-economy";
 import WhatIsMesh from "./components/modules/what-is-mesh";
 import { SECTIONS } from "./utils/constants/sections";
-import NativeNftCollection from "./component/modules/native-nft-collection";
+import { useState } from "react";
+import NativeNftCollection from "./components/native-nft-collection";
 
 function App() {
-  const [panel, setPanel] = useState<number>(1);
+  const [panel, setPanel] = useState<string>("");
 
-  const handleSelectPanel = (id: number) => {
-    setPanel(id);
-  };
+  window.addEventListener("popstate", () => {
+    setPanel(window?.location?.hash);
+    const section = document.getElementById(window?.location?.hash);
+    if (section) {
+      const sectionTop = section.offsetTop;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+    }
+  });
 
-  const renderTabContent = (id: number) => {
+  const renderTabContent = (id: string) => {
     switch (id) {
-      case 1:
+      case SECTIONS(40)[0].id:
         return <WhatIsMesh />;
-      case 2:
+      case SECTIONS(40)[1].id:
         return <CreateYourStory />;
-      case 3:
+      case SECTIONS(40)[2].id:
         return <BuildYourWorld />;
-      case 4:
+      case SECTIONS(40)[3].id:
         return <TheEconomy />;
-      case 6:
+      case SECTIONS(40)[5].id:
         return <NativeNftCollection />;
       default:
         break;
@@ -45,18 +53,23 @@ function App() {
               className={`text-gray-800 font-semibold cursor-pointer min-w-36 ${
                 panel === item.id ? "active" : ""
               }`}
-              onClick={() => handleSelectPanel(item.id)}
             >
               {panel === item.id ? (
-                <div className="flex justify-center items-center gap-4 section">
+                <a
+                  href={item.id}
+                  className="flex justify-center items-center gap-4 section"
+                >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
-                </div>
+                </a>
               ) : (
-                <div className="flex justify-center items-center gap-4 section">
+                <a
+                  href={item.id}
+                  className="flex justify-center items-center gap-4 section"
+                >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
-                </div>
+                </a>
               )}
             </li>
           )

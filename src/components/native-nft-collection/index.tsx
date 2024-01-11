@@ -1,12 +1,12 @@
-import { CollectionIcon } from "../../../assets/icon/collection.icon";
-import SpinArrow from "../../../assets/icon/spin-arrow.icon";
-import nft1 from "../../../assets/image/nft-collection-1.png";
-import nft2 from "../../../assets/image/nft-collection-2.png";
-import nft3 from "../../../assets/image/nft-collection-3.png";
-import nft4 from "../../../assets/image/nft-collection-4.png";
-import nft5 from "../../../assets/image/nft-collection-5.png";
-import nft6 from "../../../assets/image/nft-collection-6.png";
-import nft7 from "../../../assets/image/nft-collection-7.png";
+import nft1 from "../../assets/image/nft-collection-1.png";
+import nft2 from "../../assets/image/nft-collection-2.png";
+import nft3 from "../../assets/image/nft-collection-3.png";
+import nft4 from "../../assets/image/nft-collection-4.png";
+import nft5 from "../../assets/image/nft-collection-5.png";
+import nft6 from "../../assets/image/nft-collection-6.png";
+import nft7 from "../../assets/image/nft-collection-7.png";
+import { CollectionIcon } from "../../assets/icon/collection.icon";
+import SpinArrow from "../../assets/icon/spin-arrow.icon";
 const items = [
   {
     name: "Exclusive Access Code",
@@ -46,7 +46,10 @@ const nfts = [
 ];
 const NativeNftCollection = () => {
   return (
-    <div className="container max-w-[1128px] mx-auto pt-12 lg:pt-40 px-4">
+    <div
+      id="#native-NFT-collection"
+      className="container max-w-[1128px] mx-auto pt-12 lg:pt-40 px-4"
+    >
       <div className="bg-component-background p-6 lg:p-8 rounded-xl lg:rounded-2xl">
         <div className="flex items-center">
           <CollectionIcon size={40}></CollectionIcon>{" "}
