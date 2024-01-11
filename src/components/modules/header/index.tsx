@@ -24,15 +24,18 @@ const Header = () => {
                 }}
                 key={item.id}
                 onClick={() => {
-                  window.location.href = item.id;
-                  const section = document.getElementById(item.id);
-                  if (section) {
-                    console.log(section);
-                    const sectionTop = section.offsetTop;
-                    window.scrollTo({
-                      top: sectionTop,
-                      behavior: "smooth",
-                    });
+                  if (item.text) {
+                    window.location.hash = item.id;
+                    // const section = document.getElementById(item.id);
+                    // console.log(section);
+                    // if (section) {
+                    //   console.log(section);
+                    //   const sectionTop = section.offsetTop;
+                    //   window.scrollTo({
+                    //     top: sectionTop,
+                    //     behavior: "smooth",
+                    //   });
+                    // }
                   }
                 }}
               >

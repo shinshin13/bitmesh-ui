@@ -13,7 +13,7 @@ import Technology from "./component/modules/our-technology";
 import Footer from "./component/modules/footer";
 
 function App() {
-  const [panel, setPanel] = useState<string>("");
+  const [panel, setPanel] = useState<string>(SECTIONS(40)[0].id);
 
   window.addEventListener("popstate", () => {
     setPanel(window?.location?.hash);
