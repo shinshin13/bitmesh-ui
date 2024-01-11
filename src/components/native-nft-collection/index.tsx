@@ -5,6 +5,7 @@ import nft4 from "../../assets/image/nft-collection-4.png";
 import nft5 from "../../assets/image/nft-collection-5.png";
 import nft6 from "../../assets/image/nft-collection-6.png";
 import nft7 from "../../assets/image/nft-collection-7.png";
+import nft8 from "../../assets/image/nft-collection-8.png";
 import { CollectionIcon } from "../../assets/icon/collection.icon";
 import SpinArrow from "../../assets/icon/spin-arrow.icon";
 const items = [
@@ -42,6 +43,9 @@ const nfts = [
   },
   {
     imgUrl: nft7,
+  },
+  {
+    imgUrl: nft8,
   },
 ];
 const NativeNftCollection = () => {
@@ -83,7 +87,7 @@ const NativeNftCollection = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 border lg:grid-cols-4 p-3 lg:p-4 gap-2 rounded border-[#146EF4]">
+        <div className="grid grid-cols-2 border lg:grid-cols-4 px-3 pt-4 lg:px-4 lg:pt-4 gap-2 rounded-t-2xl border-[#146EF4] border-b-0">
           {nfts.map((item, index) => {
             return (
               <div key={index}>
