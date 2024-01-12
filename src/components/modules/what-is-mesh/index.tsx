@@ -7,13 +7,13 @@ const WhatIsMesh = () => {
   return (
     <div id="#what-is-bitmesh">
       <Card
-        className="mt-48 mx-auto"
+        className="mt-16 md:mt-48 mx-auto"
         icon={<BitmeshIcon />}
         title="What is BitMesh"
         subTitle="A New Era in RTS Gaming"
         content={
           <div className="pb-8">
-            <p className="mb-2">
+            <p className="mb-2 text-sm md:text-base">
               BitMesh isn't just a game; it's a revolution in real-time strategy
               (RTS) gaming. Set against the haunting remnants of Earth, this
               game is a battleground where AI adversaries evolve relentlessly.
@@ -27,13 +27,13 @@ const WhatIsMesh = () => {
               addictive gameplay loop. Here, every decision counts in the face
               of escalating AI threats.
             </p>
-            <h6 className="flex items-center text-[#ffffffcc] font-bold text-xl mt-6 mb-2">
+            <h6 className="flex items-center text-[#ffffffcc] font-bold text-base md:text-xl mt-6 mb-2">
               <span className="pr-3">
                 <ListIcon />
               </span>
               Dynamic Story Arcs
             </h6>
-            <p>
+            <p className="text-sm	md:text-base">
               In BitMesh, you're not just playing a game; you're influencing its
               future. Your choices and community votes are woven into the game's
               sci-fi fabric, steering the narrative in this ever-evolving AI

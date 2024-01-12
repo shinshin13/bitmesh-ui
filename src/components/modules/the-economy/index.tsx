@@ -8,14 +8,14 @@ const TheEconomy = () => {
   return (
     <div id="#the-economy" className="p-4">
       <Card
-        className="mt-48 mx-auto"
+        className="mt-16 md:mt-48 mx-auto"
         icon={<StackIcon />}
         title="The Economy"
         subTitle="Galactic BTC: The Currency of BitMesh"
         content={
           <div>
             <div>
-              <p className="flex text-[#ffffffcc] mt-6 mb-2">
+              <p className="flex text-[#ffffffcc] mt-6 mb-2 text-sm md:text-base">
                 <span className="pr-3">
                   <ListIcon />
                 </span>
@@ -26,7 +26,7 @@ const TheEconomy = () => {
               </p>
             </div>
             <div>
-              <p className="flex text-[#ffffffcc] mt-6 mb-2">
+              <p className="flex text-[#ffffffcc] mt-6 mb-2 text-sm md:text-base">
                 <span className="pr-3">
                   <ListIcon />
                 </span>
@@ -45,7 +45,7 @@ const TheEconomy = () => {
             <img className="rounded-t-xl" src={OrangeDiamond} alt="" />
           </div>
         }
-        imageClass="mt-12"
+        imageClass="mt-8 md:mt-12"
       />
     </div>
   );

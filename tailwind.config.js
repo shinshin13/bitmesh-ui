@@ -6,6 +6,9 @@ module.exports = {
       translate: {
         "minus-x-1/2": "translateX(-50%)",
       },
+      backgroundPosition: {
+        "cover-mobile": "0px 50px",
+      },
       backgroundImage: {
         "white-border":
           "linear-gradient(41.83deg, #FFFFFF 1.72%, rgba(255, 255, 255, 0) 72.51%)",

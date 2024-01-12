@@ -6,13 +6,13 @@ const CreateYourStory = () => {
   return (
     <div id="#create-your-story">
       <Card
-        className="mt-48 mx-auto"
+        className="mt-16 md:mt-48 mx-auto"
         icon={<CollectionIcon />}
         title="Build your World"
         subTitle="Your Battlefield, Your Saga"
         content={
           <div className="pb-8">
-            <p>
+            <p className="text-sm md:text-base">
               In the digital wastelands of BitMesh, humanity's essence is at
               stake, besieged by a relentless AI. Command your heroes,
               strategize with your custom arsenal, and engage in monumental

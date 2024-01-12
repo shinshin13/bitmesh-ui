@@ -7,10 +7,11 @@ import WhatIsMesh from "./components/modules/what-is-mesh";
 import { SECTIONS } from "./utils/constants/sections";
 import { useState } from "react";
 import NativeNftCollection from "./components/native-nft-collection";
-
+import BitmeshLogo from "./assets/image/bitmesh-3D-logo.png";
 import Behind from "./components/modules/behind-the-scene";
 import Technology from "./components/modules/our-technology";
 import Footer from "./components/modules/footer";
+import { Menu } from "./components/base/menu";
 
 function App() {
   const [panel, setPanel] = useState<string>(SECTIONS(40)[0].id);
@@ -51,7 +52,7 @@ function App() {
   const tabs = (
     <ul
       id="myTab"
-      className="tabs flex justify-center items-center relative bottom-0 inset-x-0 h-24 nav nav-tabs mt-[104px]"
+      className="tabs flex justify-center items-center relative bottom-0 inset-x-0 h-24 nav nav-tabs mt-[104px] overflow-x-scroll"
     >
       {SECTIONS(48).map(
         (item) =>
@@ -65,7 +66,7 @@ function App() {
               {panel === item.id ? (
                 <a
                   href={item.id}
-                  className="flex justify-center items-center gap-4 section"
+                  className="flex justify-center items-center gap-4 section text-xl"
                 >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
@@ -73,7 +74,7 @@ function App() {
               ) : (
                 <a
                   href={item.id}
-                  className="flex justify-center items-center gap-4 section"
+                  className="flex justify-center items-center gap-4 section text-xl"
                 >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
@@ -84,14 +85,39 @@ function App() {
       )}
     </ul>
   );
+
+  const selectItem = SECTIONS(28).find((item) => item.id === panel);
+
+  const mobileTab = (
+    <ul
+      id="myTab"
+      className="tabs flex items-center relative bottom-0 inset-x-0 h-16 nav nav-tabs mt-9"
+    >
+      <div className="p-4">
+        <img alt="" src={BitmeshLogo} className="w-20 md:hidden" />
+      </div>
+
+      <li className="text-gray-800 font-semibold cursor-pointer min-w-36 active">
+        <a
+          href={selectItem?.id}
+          className="flex justify-center items-center gap-4 section text-xs"
+        >
+          <span>{selectItem?.icon}</span>
+          {selectItem?.text}
+        </a>
+      </li>
+      <Menu />
+    </ul>
+  );
+
   return (
     <div className="App w-full h-full bg-[#080808]">
-      <div className="h-full ">
+      <div className="h-full">
         <Header />
       </div>
-      <div id="tab-contents" className="overflow-x-hidden">
+      <div id="tab-contents" className="relative">
         {renderTabContent(panel)}
-        {tabs}
+        {mobileTab}
       </div>
       <Footer />
     </div>
