@@ -12,7 +12,7 @@ export const SECTIONS = (size?: number) => [
     icon: <BitmeshIcon size={size} />,
     text: "What is BitMesh",
     top: "117px",
-    left: "952px",
+    left: "70vw",
     size: "96px",
   },
   {
@@ -20,7 +20,7 @@ export const SECTIONS = (size?: number) => [
     icon: <StoryIcon size={size} />,
     text: "Create your Story",
     top: "240px",
-    left: "619px",
+    left: "38vw",
     size: "88px",
   },
   {
@@ -28,7 +28,7 @@ export const SECTIONS = (size?: number) => [
     icon: <GlobeIcon size={size} />,
     text: "Build your World",
     top: "208px",
-    left: "304px",
+    left: "20vw",
     size: "112px",
   },
   {
@@ -36,7 +36,7 @@ export const SECTIONS = (size?: number) => [
     icon: <StackIcon size={size} />,
     text: "The Economy",
     top: "528px",
-    left: "372px",
+    left: "26vw",
     size: "96px",
   },
   {
@@ -44,7 +44,7 @@ export const SECTIONS = (size?: number) => [
     icon: <div />,
     text: "",
     top: "418px",
-    left: "1012px",
+    left: "63vw",
     size: "48px",
   },
   {
@@ -52,7 +52,7 @@ export const SECTIONS = (size?: number) => [
     icon: <CollectionIcon size={size} />,
     text: "Native NFT Collection",
     top: "576px",
-    left: "846px",
+    left: "59vw",
     size: "88px",
   },
   {
@@ -60,7 +60,7 @@ export const SECTIONS = (size?: number) => [
     icon: <BehindIcon size={size} />,
     text: "Behind the Scene",
     top: "762px",
-    left: "252px",
+    left: "17vw",
     size: "88px",
   },
   {
@@ -68,7 +68,7 @@ export const SECTIONS = (size?: number) => [
     icon: <TechnologyIcon size={size} />,
     text: "Our Technology",
     top: "689px",
-    left: "1128px",
+    left: "78vw",
     size: "112px",
   },
 ];

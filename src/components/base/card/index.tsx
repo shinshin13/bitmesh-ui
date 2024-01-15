@@ -12,10 +12,10 @@ const Card: FC<{
   return (
     <div className="p-4 md:p-0">
       <div
-        className={`flex flex-wrap items-center bg-nav-gradient border border-[#ffffff1a] rounded-lg shadow md:flex-row max-w-[1128px] ${className}`}
+        className={`flex flex-wrap md:flex-nowrap items-center bg-nav-gradient border border-[#ffffff1a] rounded-lg shadow md:flex-row max-w-[1128px] ${className}`}
       >
         <div className="p-6 md:p-8 md:basis-2/3 justify-between leading-normal pb-0">
-          <h4 className="mb-2  text-2xl md:text-[32px] font-bold tracking-tight text-gray-900 dark:text-white flex items-center">
+          <h4 className="mb-2 text-2xl md:text-[32px] font-bold tracking-tight text-gray-900 dark:text-white flex items-center">
             <span className="pr-6">{icon}</span>
             {title}
           </h4>

@@ -41,7 +41,7 @@ const WhatIsMesh = () => {
             </p>
           </div>
         }
-        image={<img className="rounded-t-xl" src={Parrish} alt="" />}
+        image={<img className="rounded-t-xl mx-auto" src={Parrish} alt="" />}
       />
     </div>
   );

@@ -12,20 +12,17 @@ import Behind from "./components/modules/behind-the-scene";
 import Technology from "./components/modules/our-technology";
 import Footer from "./components/modules/footer";
 import { Menu } from "./components/base/menu";
+import useMediaQuery from "./components/hooks/useMediaQuery";
 
 function App() {
   const [panel, setPanel] = useState<string>(SECTIONS(40)[0].id);
+  const [isMobile] = useMediaQuery("(min-width: 768px)");
 
   window.addEventListener("popstate", () => {
     setPanel(window?.location?.hash);
-    const section = document.getElementById(window?.location?.hash);
-    if (section) {
-      const sectionTop = section.offsetTop;
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      });
-    }
+    document
+      .getElementById(window?.location?.hash)
+      ?.scrollIntoView({ behavior: "smooth" });
   });
 
   const renderTabContent = (id: string) => {
@@ -52,7 +49,7 @@ function App() {
   const tabs = (
     <ul
       id="myTab"
-      className="tabs flex justify-center items-center relative bottom-0 inset-x-0 h-24 nav nav-tabs mt-[104px] overflow-x-scroll"
+      className="tabs flex justify-center items-center relative bottom-0 inset-x-0 h-24 nav nav-tabs mt-[104px] "
     >
       {SECTIONS(48).map(
         (item) =>
@@ -66,7 +63,7 @@ function App() {
               {panel === item.id ? (
                 <a
                   href={item.id}
-                  className="flex justify-center items-center gap-4 section text-xl"
+                  className="flex justify-center items-center gap-4 section md:text-md lg:text-lg xl:text-xl"
                 >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
@@ -74,7 +71,7 @@ function App() {
               ) : (
                 <a
                   href={item.id}
-                  className="flex justify-center items-center gap-4 section text-xl"
+                  className="flex justify-center items-center gap-4 section md:text-md lg:text-lg xl:text-xl"
                 >
                   <span>{item.icon}</span>
                   {panel === item.id ? item.text : ""}
@@ -93,14 +90,14 @@ function App() {
       id="myTab"
       className="tabs flex items-center relative bottom-0 inset-x-0 h-16 nav nav-tabs mt-9"
     >
-      <div className="p-4">
-        <img alt="" src={BitmeshLogo} className="w-20 md:hidden" />
+      <div className="pr-4">
+        <img alt="" src={BitmeshLogo} className="w-20 sm:hidden" />
       </div>
 
-      <li className="text-gray-800 font-semibold cursor-pointer min-w-36 active">
+      <li className="text-gray-800 font-semibold cursor-pointer min-w-36 active w-full">
         <a
           href={selectItem?.id}
-          className="flex justify-center items-center gap-4 section text-xs"
+          className="flex justify-center items-center gap-4 section text-xs w-full"
         >
           <span>{selectItem?.icon}</span>
           {selectItem?.text}
@@ -117,7 +114,7 @@ function App() {
       </div>
       <div id="tab-contents" className="relative">
         {renderTabContent(panel)}
-        {mobileTab}
+        {isMobile ? tabs : mobileTab}
       </div>
       <Footer />
     </div>

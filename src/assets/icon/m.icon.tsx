@@ -8,11 +8,11 @@ export const MIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle cx="20" cy="20" r="20" fill="url(#paint0_linear_196_1304)" />
-      <circle cx="20" cy="20" r="19.5" stroke="white" stroke-opacity="0.5" />
-      <g clip-path="url(#clip0_196_1304)">
+      <circle cx="20" cy="20" r="19.5" stroke="white" strokeOpacity="0.5" />
+      <g clipPath="url(#clip0_196_1304)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M20 30C25.5228 30 30 25.5228 30 20C30 14.4772 25.5228 10 20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30Z"
           fill="white"
         />
@@ -30,7 +30,7 @@ export const MIcon: React.FC<{ size?: number }> = ({ size = 40 }) => {
           y2="40"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3E3E3E" />
+          <stop stopColor="#3E3E3E" />
           <stop offset="1" />
         </linearGradient>
         <clipPath id="clip0_196_1304">

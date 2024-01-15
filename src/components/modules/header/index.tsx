@@ -6,7 +6,7 @@ import { SECTIONS, SECTION_MOBILE } from "../../../utils/constants/sections";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Header = () => {
-  const [isMobile] = useMediaQuery("(min-width: 640px)");
+  const [isMobile] = useMediaQuery("(min-width: 768px)");
 
   return (
     <div className="bg-[url('/src/assets/image/galaxy-cover.png')] md:bg-transparent">

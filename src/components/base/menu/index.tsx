@@ -39,14 +39,14 @@ export const Menu = () => {
               open ? "visible opacity-100" : "hidden invisible opacity-0"
             } absolute right-0 z-20 w-screen px-5 mt-6 transition`}
           >
-            <ul className="flex flex-col bg-[#161616] w-full rounded shadow-md overflow-hidden">
-              {SECTIONS(16).map((item) =>
+            <ul className="flex flex-col bg-[#161616] w-full rounded shadow-md overflow-hidden w-screen md:w-auto">
+              {SECTIONS(28).map((item) =>
                 item.text && item.id !== panel ? (
                   <li key={item.id} className="font-semibold cursor-pointer">
                     <a
                       href={item.id}
                       onClick={() => setOpen(false)}
-                      className="flex flex-1 text-sm text-white hover:bg-[#ffffff4d] font-semibold px-4 py-2 text-xs"
+                      className="flex flex-1 text-md flex items-center text-white hover:bg-[#ffffff4d] font-semibold px-4 py-2"
                     >
                       <span className="mr-2">{item.icon}</span>
                       {item.text}
